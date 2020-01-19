@@ -48,6 +48,17 @@
             </div>
         </div>
     </nav>
+    
+         {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    
+    
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -68,7 +79,7 @@
     </div>
     <footer>
         <div class="container">
-            <p>Made by Code Institute bootcampers</p>
+            <p>Patriks ecommerce</p>
         </div>
     </footer>
 </body>
